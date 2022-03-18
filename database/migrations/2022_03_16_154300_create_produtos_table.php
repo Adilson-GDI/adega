@@ -32,7 +32,7 @@ class CreateProdutosTable extends Migration
             $table->foreign('id_litragens')->references('id')->on('litragens');
             $table->foreign('id_marcas')->references('id')->on('marcas');
             $table->foreign('id_estados')->references('id')->on('estados');
-            $table->foreign('id_imagens')->references('id')->on('imagens');
+            //$table->foreign('id_imagens')->references('id')->on('imagens');
             $table->timestamps();
         });
     }
