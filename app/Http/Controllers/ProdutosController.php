@@ -12,7 +12,7 @@ class ProdutosController extends Controller
     
     public function ListaProdutos()
     {
-    $produtos = Produto::with('marca')->get();
+    $produtos = Produto::with('marca','imagem')->get();
  //   $marcas = $produtos->marca()->first(); 
 
 

@@ -15,13 +15,9 @@ class CreateImagensTable extends Migration
     {
         Schema::create('imagens', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_produto')->index();
             $table->string('nome',500)->nullable()->default(null);
             $table->timestamps();
-             /**
-             * foreign keys
-             */
-            $table->foreign('id_produto')->references('id')->on('produtos');
+    
         });
     }
 

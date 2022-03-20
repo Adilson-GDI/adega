@@ -22,6 +22,14 @@ class Produto extends Model
         return $this->hasOne(Marca::class, 'id','id_marcas');
     }
 
+    public function imagem()
+    {
+              
+        return $this->hasOne(Imagen::class, 'id','id_imagens');
+    }
+
+
+
 }
 
 

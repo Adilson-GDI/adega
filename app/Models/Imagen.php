@@ -12,17 +12,10 @@ class Imagen extends Model
         'nome'
     ];
 
-    public function imagen()
+ 
+
+    public function produtos()
     {
-       
-       
-        return $this->hasOne(Imagen::class, 'id_produto', 'id');
+        return $this->belongsTo(Produto::class,'id_produto','id');
     }
-
-
-    public function produto()
-    {
-        return $this->hasOne(Produto::class,'id','id_produto');
-    }
-
 }
