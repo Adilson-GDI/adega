@@ -24,4 +24,4 @@ Route::get('/lista-clientes', [App\Http\Controllers\ClientesController::class,'L
 Route::get('/imagens', [App\Http\Controllers\ProdutosController::class,'ListaImagens']);
 Route::get('/lista-marcas', [App\Http\Controllers\ProdutosController::class,'ListaMarcas']);
 
-Route::get('/consulta-carrinho', [App\Http\Controllers\CartsController::class,'ConsultaCarrinho']);
+Route::get('/consulta-carrinho/{id}', [App\Http\Controllers\CartsController::class,'ConsultaCarrinho']);

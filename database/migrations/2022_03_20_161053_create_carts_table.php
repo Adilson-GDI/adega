@@ -18,6 +18,7 @@ class CreateCartsTable extends Migration
             $table->unsignedInteger('id_cliente')->index();
             $table->unsignedInteger('id_produto')->index();
             $table->integer('qtd')->default('0');
+            $table->boolean('status')->default('0');
             $table->timestamps();
         });
     }
