@@ -12,4 +12,13 @@ class Cliente extends Model
         'nome',
         'cpf'
     ];
+
+
+    public function cart()
+    {
+        return $this->belongsTo(Cart::class,'id_cliente','id');
+    }
+
+
+
 }

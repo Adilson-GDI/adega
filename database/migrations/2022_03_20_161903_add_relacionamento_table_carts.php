@@ -14,6 +14,7 @@ class AddRelacionamentoTableCarts extends Migration
     public function up()
     {
         Schema::table('carts', function (Blueprint $table) {
+            $table->foreign('id_cliente')->references('id')->on('clientes');
             $table->foreign('id_produto')->references('id')->on('produtos');
         });
     }

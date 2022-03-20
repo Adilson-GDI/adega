@@ -13,6 +13,14 @@ class Cart extends Model
     ];
 
 
+    public function cliente()
+    {
+              
+        return $this->hasOne(Cliente::class, 'id','id_cliente');
+    }
+
+ 
+
 
     public function produtos()
     {
