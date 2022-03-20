@@ -23,3 +23,5 @@ Route::get('/lista-produtos', [App\Http\Controllers\ProdutosController::class,'L
 Route::get('/lista-clientes', [App\Http\Controllers\ClientesController::class,'ListaClientes']);
 Route::get('/imagens', [App\Http\Controllers\ProdutosController::class,'ListaImagens']);
 Route::get('/lista-marcas', [App\Http\Controllers\ProdutosController::class,'ListaMarcas']);
+
+Route::get('/consulta-carrinho', [App\Http\Controllers\CartsController::class,'ConsultaCarrinho']);

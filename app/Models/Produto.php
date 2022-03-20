@@ -29,6 +29,14 @@ class Produto extends Model
     }
 
 
+    public function cart()
+    {
+        return $this->belongsTo(Cart::class,'id_produto','id');
+    }
+
+  
+
+
 
 }
 
