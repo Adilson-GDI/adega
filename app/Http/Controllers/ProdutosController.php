@@ -5,10 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Imagen;
 use App\Models\Marca;
 use App\Models\Produto;
-use Illuminate\Http\Request;
+
 
 class ProdutosController extends Controller
 {
+
+
+    public function ConsultaProduto($id)
+    {
+
+   $produtos = Produto::with('marca','imagem')->where('id', '=', $id)->get();
+
+
+    return response($produtos, 201)->header('Content-Type', 'application/json');
+
+    }
     
     public function ListaProdutos()
     {
