@@ -27,3 +27,5 @@ Route::get('/lista-marcas', [App\Http\Controllers\ProdutosController::class,'Lis
 Route::get('/consulta-carrinho/{id}', [App\Http\Controllers\CartsController::class,'ConsultaCarrinho']);
 
 Route::get('/consulta-produto/{id}', [App\Http\Controllers\ProdutosController::class,'ConsultaProduto']);
+
+Route::get('/add-carrinho/{id}', [App\Http\Controllers\CartsController::class,'AddCarrinho']);
