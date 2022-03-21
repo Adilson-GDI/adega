@@ -28,4 +28,4 @@ Route::get('/consulta-carrinho/{id}', [App\Http\Controllers\CartsController::cla
 
 Route::get('/consulta-produto/{id}', [App\Http\Controllers\ProdutosController::class,'ConsultaProduto']);
 
-Route::get('/add-carrinho/{id}', [App\Http\Controllers\CartsController::class,'AddCarrinho']);
+Route::post('/add-carrinho/', [App\Http\Controllers\CartsController::class,'AddCarrinho']);
