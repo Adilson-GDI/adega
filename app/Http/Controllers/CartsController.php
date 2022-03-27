@@ -12,9 +12,25 @@ class CartsController extends Controller
     public function ConsultaCarrinho($id)
     {
  
-    $carrinho = Cart::with('cliente','produtos')->whereHas('cliente')->where('id_cliente', '=', $id)->Where('status','=','0')->get();
+    $carrinho = Cart::with('cliente','produtos')
+    ->whereHas('cliente')->where('id_cliente', '=', $id)
+    ->Where('status','=','0')
+    ->get();
 
     return response($carrinho, 201)->header('Content-Type', 'application/json');
+
+    }
+
+
+    public function SomaCarrinho($id)
+    {
+ 
+    $soma = Cart::with('cliente','produtos')
+    ->whereHas('cliente')->where('id_cliente', '=', $id)->Where('status','=','0')
+    ->sum('total');
+
+
+    return response($soma, 201)->header('Content-Type', 'application/json');
 
     }
 
@@ -26,10 +42,14 @@ class CartsController extends Controller
    $carrinho=Cart::create([
         'id_cliente'=>$data->id_cliente,
         'id_produto'=>$data->id_produto,
-         'qtd'=>$data->qtd
+        'total'=>$data->total,
+        'qtd'=>$data->qtd
+        
     ]);
   
     return response($carrinho, 201)->header('Content-Type', 'application/json');
 
     }
+
+    
 }

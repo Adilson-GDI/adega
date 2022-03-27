@@ -10,6 +10,7 @@ class Cart extends Model
     protected $table = "carts";
     protected $fillable = [
         'qtd',
+        'total',
         'id_cliente',
         'id_produto'
     ];
