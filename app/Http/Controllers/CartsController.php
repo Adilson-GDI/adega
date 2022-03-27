@@ -52,5 +52,17 @@ class CartsController extends Controller
 
     }
 
+    public function DeleteCarrinho($id)
+    {
+
+    $cart = Cart::where('id', '=', $id)
+    ->delete();
+  
+  
+    return response($cart, 201)->header('Content-Type', 'application/json');
+
+    }
+
+
     
 }

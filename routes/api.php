@@ -28,3 +28,6 @@ Route::get('/consulta-carrinho/{id}', [App\Http\Controllers\CartsController::cla
 Route::get('/consulta-produto/{id}', [App\Http\Controllers\ProdutosController::class,'ConsultaProduto']);
 Route::get('/soma/{id}', [App\Http\Controllers\CartsController::class,'SomaCarrinho']);
 Route::post('/add-carrinho/', [App\Http\Controllers\CartsController::class,'AddCarrinho']);
+
+
+Route::get('/delete/{id}', [App\Http\Controllers\CartsController::class,'DeleteCarrinho']);
