@@ -11,6 +11,7 @@ class Cart extends Model
       protected $fillable = [
         'qtd',
         'total',
+        'valor',
         'id_cliente',
         'id_produto'
     ];

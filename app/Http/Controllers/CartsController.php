@@ -43,6 +43,7 @@ class CartsController extends Controller
         'id_cliente'=>$data->id_cliente,
         'id_produto'=>$data->id_produto,
         'total'=>$data->total,
+        'valor'=>$data->valor,
         'qtd'=>$data->qtd
         
     ]);
