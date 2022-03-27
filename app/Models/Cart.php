@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Cart extends Model
 {
     protected $table = "carts";
-     protected $fillable = [
+      protected $fillable = [
         'qtd',
         'total',
         'id_cliente',

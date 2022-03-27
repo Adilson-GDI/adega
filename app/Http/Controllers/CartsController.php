@@ -25,7 +25,7 @@ class CartsController extends Controller
     public function SomaCarrinho($id)
     {
  
-     $soma = Cart::with('cliente','produtos')
+      $soma = Cart::with('cliente','produtos')
     ->whereHas('cliente')->where('id_cliente', '=', $id)->Where('status','=','0')
     ->sum('total');
 
