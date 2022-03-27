@@ -25,9 +25,6 @@ Route::get('/imagens', [App\Http\Controllers\ProdutosController::class,'ListaIma
 Route::get('/lista-marcas', [App\Http\Controllers\ProdutosController::class,'ListaMarcas']);
 
 Route::get('/consulta-carrinho/{id}', [App\Http\Controllers\CartsController::class,'ConsultaCarrinho']);
-
 Route::get('/consulta-produto/{id}', [App\Http\Controllers\ProdutosController::class,'ConsultaProduto']);
-
 Route::get('/soma/{id}', [App\Http\Controllers\CartsController::class,'SomaCarrinho']);
-
 Route::post('/add-carrinho/', [App\Http\Controllers\CartsController::class,'AddCarrinho']);
